@@ -1,31 +1,22 @@
 #include <stdio.h>
-
-
+#include <stdlib.h>
+#include <time.h>
 
 /**
+ * main - Entry point
  *
- *  * main - This program prints every letter of the alphabet in lowercase
- *
- *   * Return: 0 (Success)
- *
- *    */
-
-
+ * Return: Always 0 (success)
+ */
 
 int main(void)
-
 {
+	char low;
 
-		int i;
+	for (low = 'a'; low <= 'z'; low++)
+	{
+		putchar(low);
+	}
+	putchar('\n');
 
-
-
-			for (i = 97; i <= 122; i++)
-
-						putchar(i);
-
-				putchar('\n');
-
-					return (0);
-
+	return (0);
 }
