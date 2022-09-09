@@ -1,51 +1,17 @@
 #include <stdio.h>
 
-
-
 /**
- *
- *  *  main - prints the alphabet in lowercase, then in uppercase.
- *
- *   *
- *
- *    *   Return: 0 on success
- *
- *     */
-
-
-
+ * main - This program prints all decimal numbers
+ * Return: Exit status is zero if successful
+ */
 int main(void)
-
 {
+	int i;
 
-		char c = 'a';
-
-			char d = 'A';
-
-
-
-				while (c <= 'z')
-
-						{
-
-									putchar(c);
-
-											c++;
-
-												}
-
-					while (d <= 'Z')
-
-							{
-
-										putchar(d);
-
-												d++;
-
-													}
-
-						putchar('\n');
-
-							return (0);
-
+	for (i = 0; i < 10; i++)
+	{
+		printf("%d", i);
+	}
+	printf("\n");
+	return (0);
 }
