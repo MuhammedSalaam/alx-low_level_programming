@@ -2,7 +2,7 @@
 
 /**
  * _abs - Computes the absolute value of the integer passed
- * @n:@n: This is a real number
+ * @n: This is a real number
  *
  * Return: Absolute Value
  */
