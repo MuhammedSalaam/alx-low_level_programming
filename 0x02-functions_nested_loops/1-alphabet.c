@@ -1,41 +1,18 @@
-nclude "main.h"
-
-
+#include "main.h"
 
 /**
- *
- *  * main - Entry point
- *
- *   * Return:always 0 (success)
- *
- *    */
-
-int main(void)
-
+ * print_alphabet-prints a-z in lowercase
+ * Return: Nothing (Null void)
+ */
+void print_alphabet(void)
 {
+	char alphabet = 'a';
 
-		_putchar('_');
+	while (alphabet <= 'z')
+	{
+		_putchar(alphabet);
+		alphabet++;
+	}
 
-			_putchar('p');
-
-				_putchar('u');
-
-					_putchar('t');
-
-						_putchar('c');
-
-							_putchar('h');
-
-								_putchar('a');
-
-									_putchar('r');
-
-										_putchar('\n');
-
-
-
-											return (0);
-
+	_putchar('\n');
 }
-
-
