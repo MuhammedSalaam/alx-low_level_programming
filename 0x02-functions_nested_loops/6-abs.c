@@ -1,41 +1,23 @@
 #include "main.h"
 
-
-
 /**
+ * _abs - Computes the absolute value of the integer passed
+ * @n:@n: This is a real number
  *
- *  * main - Entry point
- *
- *   * Return:always 0 (success)
- *
- *    */
-
-int main(void)
-
+ * Return: Absolute Value
+ */
+int _abs(int n)
 {
-
-		_putchar('_');
-
-			_putchar('p');
-
-				_putchar('u');
-
-					_putchar('t');
-
-						_putchar('c');
-
-							_putchar('h');
-
-								_putchar('a');
-
-									_putchar('r');
-
-										_putchar('\n');
-
-
-
-											return (0);
-
+	if (n > 0)
+	{
+		return (n);
+	}
+	else if (n < 0)
+	{
+		return (n * -1);
+	}
+	else
+	{
+		return (0);
+	}
 }
-
-
