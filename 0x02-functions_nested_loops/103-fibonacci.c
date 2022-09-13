@@ -1,41 +1,31 @@
-#include "main.h"
-
-
+#include <stdio.h>
 
 /**
- *
- *  * main - Entry point
- *
- *   * Return:always 0 (success)
- *
- *    */
-
+ * main - finds and prints the sum of the even-valued terms
+ * followed by a new line
+ * Return: Always 0 (Success)
+ */
 int main(void)
-
 {
+	int i;
+	unsigned long int j, k, next, sum;
 
-		_putchar('_');
+	j = 1;
+	k = 2;
+	sum = 0;
 
-			_putchar('p');
+	for (i = 1; i <= 33; ++i)
+	{
+		if (j < 4000000 && (j % 2) == 0)
+		{
+			sum = sum + j;
+		}
+		next = j + k;
+		j = k;
+		k = next;
+	}
 
-				_putchar('u');
+	printf("%lu\n", sum);
 
-					_putchar('t');
-
-						_putchar('c');
-
-							_putchar('h');
-
-								_putchar('a');
-
-									_putchar('r');
-
-										_putchar('\n');
-
-
-
-											return (0);
-
+	return (0);
 }
-
-
