@@ -1,41 +1,24 @@
 #include "main.h"
 
-
-
 /**
- *
- *  * main - Entry point
- *
- *   * Return:always 0 (success)
- *
- *    */
-
-int main(void)
-
+ * print_alphabet_x10 - Prints a-z in lowercase 10 times
+ * Return: Nothing (Null Void)
+ */
+void print_alphabet_x10(void)
 {
+	int i = 0;
 
-		_putchar('_');
+	while (i < 10)
+	{
+		char alphabet = 'a';
 
-			_putchar('p');
+		while (alphabet <= 'z')
+		{
+			_putchar(alphabet);
+			alphabet++;
+		}
 
-				_putchar('u');
-
-					_putchar('t');
-
-						_putchar('c');
-
-							_putchar('h');
-
-								_putchar('a');
-
-									_putchar('r');
-
-										_putchar('\n');
-
-
-
-											return (0);
-
+		_putchar('\n');
+		i++;
+	}
 }
-
-
