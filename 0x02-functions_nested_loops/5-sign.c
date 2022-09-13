@@ -1,41 +1,26 @@
 #include "main.h"
 
-
-
 /**
+ * print_sign - Check for -ve, +ve or 0 integers
+ * @n: This is a real number
  *
- *  * main - Entry point
- *
- *   * Return:always 0 (success)
- *
- *    */
-
-int main(void)
-
+ * Return: 0 if zero, 1 if > 0 and -1 if < 0
+ */
+int print_sign(int n)
 {
-
-		_putchar('_');
-
-			_putchar('p');
-
-				_putchar('u');
-
-					_putchar('t');
-
-						_putchar('c');
-
-							_putchar('h');
-
-								_putchar('a');
-
-									_putchar('r');
-
-										_putchar('\n');
-
-
-
-											return (0);
-
+	if (n > 0)
+	{
+		_putchar('+');
+		return (1);
+	}
+	else if (n < 0)
+	{
+		_putchar('-');
+		return (-1);
+	}
+	else
+	{
+		_putchar('0');
+		return (0);
+	}
 }
-
-
