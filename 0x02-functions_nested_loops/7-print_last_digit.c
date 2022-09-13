@@ -1,41 +1,19 @@
 #include "main.h"
 
-
-
 /**
+ * print_last_digit - Prints the last digit of any value
+ * @n: This is a real number
  *
- *  * main - Entry point
- *
- *   * Return:always 0 (success)
- *
- *    */
-
-int main(void)
-
+ * Return: Last value of digit
+ */
+int print_last_digit(int n)
 {
+	int last = n % 10;
 
-		_putchar('_');
+	if (n < 0)
+		last *= -1;
 
-			_putchar('p');
+	_putchar(last + '0');
 
-				_putchar('u');
-
-					_putchar('t');
-
-						_putchar('c');
-
-							_putchar('h');
-
-								_putchar('a');
-
-									_putchar('r');
-
-										_putchar('\n');
-
-
-
-											return (0);
-
+	return (last);
 }
-
-
