@@ -1,41 +1,18 @@
-lude "main.h"
-
-
+#include "main.h"
 
 /**
- *
- *  * main - Entry point
- *
- *   * Return:always 0 (success)
- *
- *    */
-
-int main(void)
-
+ * _isalpha - Check for lowercase ASCII characters
+ * @c: This is an ASCII character
+ * Return: 0 if not an alphabet, 1 if so
+ */
+int _isalpha(int c)
 {
-
-		_putchar('_');
-
-			_putchar('p');
-
-				_putchar('u');
-
-					_putchar('t');
-
-						_putchar('c');
-
-							_putchar('h');
-
-								_putchar('a');
-
-									_putchar('r');
-
-										_putchar('\n');
-
-
-
-											return (0);
-
+	if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90))
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
-
-
