@@ -1,41 +1,19 @@
 #include "main.h"
 
-
-
 /**
+ * _islower - Check for lowercase ASCII characters
+ * @c: This is an ASCII character
  *
- *  * main - Entry point
- *
- *   * Return:always 0 (success)
- *
- *    */
-
-int main(void)
-
+ * Return: 0 if not lowercase, 1 if lowercase
+ */
+int _islower(int c)
 {
-
-		_putchar('_');
-
-			_putchar('p');
-
-				_putchar('u');
-
-					_putchar('t');
-
-						_putchar('c');
-
-							_putchar('h');
-
-								_putchar('a');
-
-									_putchar('r');
-
-										_putchar('\n');
-
-
-
-											return (0);
-
+	if ((c >= 97) && (c <= 122))
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
-
-
