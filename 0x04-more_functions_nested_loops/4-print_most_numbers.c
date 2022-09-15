@@ -1,49 +1,25 @@
-lude "main.h"
-
-#include <ctype.h>
-
-
+#include "main.h"
 
 /**
+ * print_most_numbers - print most num exclude 2 and 4
  *
- *  * _isupper - checks for uppercase letters
- *
- *   *
- *
- *    * @c: parametr to be printed
- *
- *     * Return: 0 or 1 depending on the condition
- *
- *      */
+ * Return: 0
+ */
 
-
-
-int _isupper(int c)
-
+void print_most_numbers(void)
 {
+	int n;
 
-		if (isupper(c))
-
-				{
-
-							return (1);
-
-								}
-
-			else
-
-					{
-
-								return (0);
-
-									}
-
+	for (n = 0; n <= 9; n++)
+	{
+		if (n == 2 || n == 4)
+		{
+			continue;
+		}
+		else
+		{
+			_putchar((n % 10) + '0');
+		}
+	}
+	_putchar('\n');
 }
-
-Footer
-
-© 2022 GitHub, Inc.
-
-Footer navigation
-
-Terms
