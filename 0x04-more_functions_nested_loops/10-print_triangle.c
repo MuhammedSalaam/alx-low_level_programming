@@ -1,49 +1,29 @@
 #include "main.h"
 
-#include <ctype.h>
-
-
-
 /**
- *
- *  * _isupper - checks for uppercase letters
- *
- *   *
- *
- *    * @c: parametr to be printed
- *
- *     * Return: 0 or 1 depending on the condition
- *
- *      */
-
-
-
-int _isupper(int c)
-
+ * print_triangle -  a function that prints a triangle, followed by a new line.
+ * @size: An input integer
+ * Return: Always 0
+ */
+void print_triangle(int size)
 {
+	int i = 0, j, n = size - 1;
 
-		if (isupper(c))
-
-				{
-
-							return (1);
-
-								}
-
-			else
-
-					{
-
-								return (0);
-
-									}
-
+	if (size > 0)
+	{
+		for (; i < size; i++)
+		{
+			for (j = 0; j < size; j++)
+			{
+				if (j < n)
+					_putchar(' ');
+				else
+					_putchar('#');
+			}
+			n--;
+			_putchar('\n');
+		}
+	}
+	else
+		_putchar('\n');
 }
-
-Footer
-
-© 2022 GitHub, Inc.
-
-Footer navigation
-
-Terms
