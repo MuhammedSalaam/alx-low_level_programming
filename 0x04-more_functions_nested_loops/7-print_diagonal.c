@@ -1,49 +1,30 @@
 #include "main.h"
 
-#include <ctype.h>
-
-
-
 /**
+ * print_diagonal - print diagonal line
+ * @n: number of lines to print
  *
- *  * _isupper - checks for uppercase letters
- *
- *   *
- *
- *    * @c: parametr to be printed
- *
- *     * Return: 0 or 1 depending on the condition
- *
- *      */
+ * Return: 0
+ */
 
-
-
-int _isupper(int c)
-
+void print_diagonal(int n)
 {
+	int i, num;
 
-		if (isupper(c))
-
-				{
-
-							return (1);
-
-								}
-
-			else
-
-					{
-
-								return (0);
-
-									}
-
+	if (n <= 0)
+	{
+		_putchar('\n');
+	}
+	else
+	{
+		for (num = 0; num < n; num++)
+		{
+			for (i = 0; i < num; i++)
+			{
+				_putchar(' ');
+			}
+			_putchar('\\');
+			_putchar('\n');
+		}
+	}
 }
-
-Footer
-
-© 2022 GitHub, Inc.
-
-Footer navigation
-
-Terms
