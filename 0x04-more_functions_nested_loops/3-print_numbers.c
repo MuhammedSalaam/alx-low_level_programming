@@ -1,49 +1,18 @@
 #include "main.h"
 
-#include <ctype.h>
-
-
-
 /**
- *
- *  * _isupper - checks for uppercase letters
- *
- *   *
- *
- *    * @c: parametr to be printed
- *
- *     * Return: 0 or 1 depending on the condition
- *
- *      */
+ * print_numbers - print num from zero to 9
+ * Return: 0
+ */
 
 
-
-int _isupper(int c)
-
+void print_numbers(void)
 {
+	int n;
 
-		if (isupper(c))
-
-				{
-
-							return (1);
-
-								}
-
-			else
-
-					{
-
-								return (0);
-
-									}
-
+	for (n = 0; n <= 9; n++)
+	{
+		_putchar((n % 10) + '0');
+	}
+	_putchar('\n');
 }
-
-Footer
-
-© 2022 GitHub, Inc.
-
-Footer navigation
-
-Terms
