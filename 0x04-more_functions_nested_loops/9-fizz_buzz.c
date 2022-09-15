@@ -1,49 +1,42 @@
+#include <stdio.h>
 #include "main.h"
 
-#include <ctype.h>
-
-
-
 /**
+ * main - Fizz buszz challenge
  *
- *  * _isupper - checks for uppercase letters
- *
- *   *
- *
- *    * @c: parametr to be printed
- *
- *     * Return: 0 or 1 depending on the condition
- *
- *      */
-
-
-
-int _isupper(int c)
-
+ * Return: 0
+ */
+int main(void)
 {
+	int i;
 
-		if (isupper(c))
-
-				{
-
-							return (1);
-
-								}
-
+	for (i = 1; i <= 100; i++)
+	{
+		if (i % 15 == 0)
+		{
+			printf("FizzBuzz ");
+		}
+		else if (i % 3 == 0)
+		{
+			printf("Fizz ");
+		}
+		else if (i % 5 == 0)
+		{
+			if (i == 100)
+			{
+				printf("Buzz");
+			}
 			else
+			{
+				printf("Buzz ");
+			}
+		}
+		else
+		{
+			printf("%d ", i);
+		}
+	}
+	printf("\n");
 
-					{
-
-								return (0);
-
-									}
-
+	return (0);
 }
-
-Footer
-
-© 2022 GitHub, Inc.
-
-Footer navigation
-
-Terms
