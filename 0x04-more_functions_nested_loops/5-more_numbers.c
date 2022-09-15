@@ -1,49 +1,26 @@
 #include "main.h"
 
-#include <ctype.h>
-
-
-
 /**
+ * more_numbers - priint more
  *
- *  * _isupper - checks for uppercase letters
- *
- *   *
- *
- *    * @c: parametr to be printed
- *
- *     * Return: 0 or 1 depending on the condition
- *
- *      */
+ * Return: 0
+ */
 
-
-
-int _isupper(int c)
-
+void more_numbers(void)
 {
+	int count;
+	int n;
 
-		if (isupper(c))
-
-				{
-
-							return (1);
-
-								}
-
-			else
-
-					{
-
-								return (0);
-
-									}
-
+	for (count = 0; count < 10; count++)
+	{
+		for (n = 0; n <= 14; n++)
+		{
+			if (n > 9)
+			{
+				_putchar((n / 10) + '0');
+			}
+			_putchar((n % 10) + '0');
+		}
+		_putchar('\n');
+	}
 }
-
-Footer
-
-© 2022 GitHub, Inc.
-
-Footer navigation
-
-Terms
