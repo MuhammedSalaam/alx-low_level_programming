@@ -1,49 +1,22 @@
 #include "main.h"
-
 #include <ctype.h>
 
-
-
 /**
+ * _isdigit - check for numbers
  *
- *  * _isupper - checks for uppercase letters
+ * @c: parameter to print
  *
- *   *
- *
- *    * @c: parametr to be printed
- *
- *     * Return: 0 or 1 depending on the condition
- *
- *      */
+ * Return: 0 or 1
+ */
 
-
-
-int _isupper(int c)
-
+int _isdigit(int c)
 {
-
-		if (isupper(c))
-
-				{
-
-							return (1);
-
-								}
-
-			else
-
-					{
-
-								return (0);
-
-									}
-
+	if (c >= '0' && c <= '9')
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
-
-Footer
-
-© 2022 GitHub, Inc.
-
-Footer navigation
-
-Terms
