@@ -1,49 +1,31 @@
 #include "main.h"
 
-#include <ctype.h>
-
-
-
 /**
- *
- *  * _isupper - checks for uppercase letters
- *
- *   *
- *
- *    * @c: parametr to be printed
- *
- *     * Return: 0 or 1 depending on the condition
- *
- *      */
+ * print_square - print square
+ * @size: number to print
+ * Return: 0
+ */
 
-
-
-int _isupper(int c)
-
+void print_square(int size)
 {
+	int first, second;
 
-		if (isupper(c))
-
-				{
-
-							return (1);
-
-								}
-
-			else
-
-					{
-
-								return (0);
-
-									}
-
+	if (size <= 0)
+	{
+		_putchar('\n');
+	}
+	else
+	{
+		for (first = 0; first < size; first++)
+		{
+			for (second = 0; second < size; second++)
+			{
+				_putchar('#');
+			}
+			if (first == size - 1)
+				continue;
+			_putchar('\n');
+		}
+		_putchar('\n');
+	}
 }
-
-Footer
-
-© 2022 GitHub, Inc.
-
-Footer navigation
-
-Terms
