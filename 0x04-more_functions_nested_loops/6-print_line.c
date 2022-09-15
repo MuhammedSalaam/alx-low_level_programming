@@ -1,49 +1,20 @@
 #include "main.h"
 
-#include <ctype.h>
-
-
-
 /**
+ * print_line - print lines
  *
- *  * _isupper - checks for uppercase letters
+ * @n: number of lines to be printed
  *
- *   *
- *
- *    * @c: parametr to be printed
- *
- *     * Return: 0 or 1 depending on the condition
- *
- *      */
+ * Return: 0
+ */
 
-
-
-int _isupper(int c)
-
+void print_line(int n)
 {
+	int count = n, i;
 
-		if (isupper(c))
-
-				{
-
-							return (1);
-
-								}
-
-			else
-
-					{
-
-								return (0);
-
-									}
-
+	for (i = 0; i < count; i++)
+	{
+		_putchar('_');
+	}
+	_putchar('\n');
 }
-
-Footer
-
-© 2022 GitHub, Inc.
-
-Footer navigation
-
-Terms
