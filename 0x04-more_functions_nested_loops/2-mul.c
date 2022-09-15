@@ -1,49 +1,14 @@
 #include "main.h"
-
-#include <ctype.h>
-
-
-
 /**
- *
- *  * _isupper - checks for uppercase letters
- *
- *   *
- *
- *    * @c: parametr to be printed
- *
- *     * Return: 0 or 1 depending on the condition
- *
- *      */
+ * mul - multiplies two integer numbers
+ * @a: first integer
+ * @b: second integer
+ * Return: sum
+ */
 
-
-
-int _isupper(int c)
-
+int mul(int a, int b)
 {
+	int sum = a * b;
 
-		if (isupper(c))
-
-				{
-
-							return (1);
-
-								}
-
-			else
-
-					{
-
-								return (0);
-
-									}
-
+	return (sum);
 }
-
-Footer
-
-© 2022 GitHub, Inc.
-
-Footer navigation
-
-Terms
