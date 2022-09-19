@@ -1,33 +1,21 @@
-#ifndef MAIN_H
+#include "main.h"
+#include <stdio.h>
 
-#define MAIN_H
+/**
+ * print_array - prints n elements of an array of integers.
+ * @a: input array.
+ * @n: input n elements
+ * Return: no return.
+ */
+void print_array(int *a, int n)
+{
+	int i = 0;
 
-
-
-int _putchar(char c);
-
-void reset_to_98(int *n);
-
-void swap_int(int *a, int *b);
-
-int _strlen(char *s);
-
-void _puts(char *str);
-
-void print_rev(char *s);
-
-void rev_string(char *s);
-
-void puts2(char *str);
-
-void puts_half(char *str);
-
-void print_array(int *a, int n);
-
-char *_strcpy(char *dest, char *src);
-
-int _atoi(char *s);
-
-
-
-#endif
+	for (; i < n; i++)
+	{
+		printf("%d", *(a + i));
+		if (i != (n - 1))
+			printf(", ");
+	}
+	printf("\n");
+}
