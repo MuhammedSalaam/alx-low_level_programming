@@ -1,33 +1,32 @@
-#ifndef MAIN_H
+#include "main.h"
 
-#define MAIN_H
+/**
+ * rev_string - reverse string
+ * @s: string
+ * Return: void
+ */
 
+void rev_string(char *s)
+{
+	int i, max, half;
+	char first, last;
 
+	i = 0;
 
-int _putchar(char c);
+	while (s[i] != '\0')
+	{
+		i++;
+	}
 
-void reset_to_98(int *n);
+	max = i - 1;
+	half = max / 2;
 
-void swap_int(int *a, int *b);
-
-int _strlen(char *s);
-
-void _puts(char *str);
-
-void print_rev(char *s);
-
-void rev_string(char *s);
-
-void puts2(char *str);
-
-void puts_half(char *str);
-
-void print_array(int *a, int n);
-
-char *_strcpy(char *dest, char *src);
-
-int _atoi(char *s);
-
-
-
-#endif
+	while (half >= 0)
+	{
+		first = s[max - half];
+		last = s[half];
+		s[half] = first;
+		s[max - half] = last;
+		half--;
+	}
+}
