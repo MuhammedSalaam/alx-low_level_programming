@@ -1,33 +1,27 @@
-#ifndef MAIN_H
+#include "main.h"
 
-#define MAIN_H
+/**
+ * puts_half - prints half of a string.
+ * @str: input string.
+ * Return: no return.
+ */
+void puts_half(char *str)
+{
+	int count = 0, i;
 
+	while (count >= 0)
+	{
+		if (str[count] == '\0')
+			break;
+		count++;
+	}
 
+	if (count % 2 == 1)
+		i = count / 2;
+	else
+		i = (count - 1) / 2;
 
-int _putchar(char c);
-
-void reset_to_98(int *n);
-
-void swap_int(int *a, int *b);
-
-int _strlen(char *s);
-
-void _puts(char *str);
-
-void print_rev(char *s);
-
-void rev_string(char *s);
-
-void puts2(char *str);
-
-void puts_half(char *str);
-
-void print_array(int *a, int n);
-
-char *_strcpy(char *dest, char *src);
-
-int _atoi(char *s);
-
-
-
-#endif
+	for (i++; i < count; i++)
+		_putchar(str[i]);
+	_putchar('\n');
+}
