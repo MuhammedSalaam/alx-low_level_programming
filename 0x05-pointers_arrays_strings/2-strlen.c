@@ -1,33 +1,20 @@
-#ifndef MAIN_H
+#include "main.h"
 
-#define MAIN_H
+/**
+ * _strlen - Counts the number of chars in a string
+ * @s: this is a string
+ *
+ * Return: An integer which is the number of chars
+ */
+int _strlen(char *s)
+{
+	int no_of_chars;
+	int track;
 
+	for (no_of_chars = 0, track = 0; *(s + track) != '\0'; track++)
+	{
+		no_of_chars++;
+	}
 
-
-int _putchar(char c);
-
-void reset_to_98(int *n);
-
-void swap_int(int *a, int *b);
-
-int _strlen(char *s);
-
-void _puts(char *str);
-
-void print_rev(char *s);
-
-void rev_string(char *s);
-
-void puts2(char *str);
-
-void puts_half(char *str);
-
-void print_array(int *a, int n);
-
-char *_strcpy(char *dest, char *src);
-
-int _atoi(char *s);
-
-
-
-#endif
+	return (no_of_chars);
+}
