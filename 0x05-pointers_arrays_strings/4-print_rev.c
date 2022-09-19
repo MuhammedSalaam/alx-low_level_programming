@@ -1,33 +1,21 @@
-#ifndef MAIN_H
+#include "main.h"
+#include "2-strlen.c"
 
-#define MAIN_H
-
-
-
-int _putchar(char c);
-
-void reset_to_98(int *n);
-
-void swap_int(int *a, int *b);
-
-int _strlen(char *s);
-
-void _puts(char *str);
-
-void print_rev(char *s);
-
-void rev_string(char *s);
-
-void puts2(char *str);
-
-void puts_half(char *str);
-
-void print_array(int *a, int n);
-
-char *_strcpy(char *dest, char *src);
-
-int _atoi(char *s);
+/**
+ * print_rev - prints a string to stdout in reverse
+ * @s: this is a string
+ *
+ * Return: Null void
+ */
+void print_rev(char *s)
+{
+	int track;
 
 
+	for (track = _strlen(s) - 1; track >= 0; track--)
+	{
+		_putchar(*(s + track));
+	}
 
-#endif
+	_putchar('\n');
+}
