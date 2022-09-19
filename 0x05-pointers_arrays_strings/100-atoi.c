@@ -1,33 +1,35 @@
-#ifndef MAIN_H
+#include "main.h"
 
-#define MAIN_H
+/**
+ * _atoi - converts a string to an integer.
+ * @s: input string.
+ * Return: integer.
+ */
+int _atoi(char *s)
+{
+	unsigned int count = 0, size = 0, oi = 0, pn = 1, m = 1, i;
 
+	while (*(s + count) != '\0')
+	{
+		if (size > 0 && (*(s + count) < '0' || *(s + count) > '9'))
+			break;
 
+		if (*(s + count) == '-')
+			pn *= -1;
 
-int _putchar(char c);
+		if ((*(s + count) >= '0') && (*(s + count) <= '9'))
+		{
+			if (size > 0)
+				m *= 10;
+			size++;
+		}
+		count++;
+	}
 
-void reset_to_98(int *n);
-
-void swap_int(int *a, int *b);
-
-int _strlen(char *s);
-
-void _puts(char *str);
-
-void print_rev(char *s);
-
-void rev_string(char *s);
-
-void puts2(char *str);
-
-void puts_half(char *str);
-
-void print_array(int *a, int n);
-
-char *_strcpy(char *dest, char *src);
-
-int _atoi(char *s);
-
-
-
-#endif
+	for (i = count - size; i < count; i++)
+	{
+		oi = oi + ((*(s + i) - 48) * m);
+		m /= 10;
+	}
+	return (oi * pn);
+}
