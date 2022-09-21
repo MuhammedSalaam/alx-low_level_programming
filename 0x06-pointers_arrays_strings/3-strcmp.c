@@ -1,59 +1,24 @@
 #include "main.h"
 
-
-
 /**
+ * _strcmp - This compares two strings
+ * @s1: This is the first string
+ * @s2: This is the second string
  *
- *  * _strncat - Concatenates one string to another
- *
- *   * @dest: This is the string to be concatenated to
- *
- *    * @src: This is the string to be concatenated
- *
- *     * @n: number of bytes to be copied
- *
- *      *
- *
- *       * Return: The destination string
- *
- *        */
-
-char *_strncat(char *dest, char *src, int n)
-
+ * Return: An int, 0 if equal, +ve is 1 > 2
+ * -ve if 1 < 2
+ */
+int _strcmp(char *s1, char *s2)
 {
+	int count = 0, count2 = 0;
 
-		int i;
+	while (count == 0)
+	{
+		if ((*(s1 + count2) == '\0') && (*(s2 + count2) == '\0'))
+			break;
+		count = *(s1 + count2) - *(s2 + count2);
+		count2++;
+	}
 
-			int destLength = 0;
-
-				int counter = 0;
-
-
-
-					while (dest[counter] != '\0')
-
-							{
-
-										destLength++;
-
-												counter++;
-
-													}
-
-
-
-						for (i = 0; i < n && src[i] != '\0'; i++)
-
-								{
-
-											dest[destLength + i] = src[i];
-
-												}
-
-							dest[destLength + i] = '\0';
-
-
-
-								return (dest);
-
+	return (count);
 }
