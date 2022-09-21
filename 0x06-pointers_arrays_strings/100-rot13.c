@@ -1,59 +1,28 @@
 #include "main.h"
 
-
-
 /**
+ * rot13 - This implements the rot13 cipher algorithm
+ * @s: This is the string to be ciphered
  *
- *  * _strncat - Concatenates one string to another
- *
- *   * @dest: This is the string to be concatenated to
- *
- *    * @src: This is the string to be concatenated
- *
- *     * @n: number of bytes to be copied
- *
- *      *
- *
- *       * Return: The destination string
- *
- *        */
-
-char *_strncat(char *dest, char *src, int n)
-
+ * Return: The ciphered string
+ */
+char *rot13(char *s)
 {
+	int i, j;
+	char alphabet[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char cipher[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-		int i;
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		for (j = 0; alphabet[j] != '\0'; j++)
+		{
+			if (s[i] == alphabet[j])
+			{
+				s[i] = cipher[j];
+				break;
+			}
+		}
+	}
 
-			int destLength = 0;
-
-				int counter = 0;
-
-
-
-					while (dest[counter] != '\0')
-
-							{
-
-										destLength++;
-
-												counter++;
-
-													}
-
-
-
-						for (i = 0; i < n && src[i] != '\0'; i++)
-
-								{
-
-											dest[destLength + i] = src[i];
-
-												}
-
-							dest[destLength + i] = '\0';
-
-
-
-								return (dest);
-
+	return (s);
 }
