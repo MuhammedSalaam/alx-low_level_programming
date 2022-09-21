@@ -1,59 +1,37 @@
 #include "main.h"
 
-
-
 /**
+ * print_number - Prints a passed number to stdout
+ * @n: This is the number to be printed
  *
- *  * _strncat - Concatenates one string to another
- *
- *   * @dest: This is the string to be concatenated to
- *
- *    * @src: This is the string to be concatenated
- *
- *     * @n: number of bytes to be copied
- *
- *      *
- *
- *       * Return: The destination string
- *
- *        */
-
-char *_strncat(char *dest, char *src, int n)
-
+ * Return: Null Void
+ */
+void print_number(int n)
 {
+	unsigned int m, d, count;
 
-		int i;
-
-			int destLength = 0;
-
-				int counter = 0;
-
-
-
-					while (dest[counter] != '\0')
-
-							{
-
-										destLength++;
-
-												counter++;
-
-													}
+	if (n < 0)
+	{
+		_putchar(45);
+		m = n * -1;
+	}
+	else
+	{
+		m = n;
+	}
 
 
+	d = m;
+	count = 1;
 
-						for (i = 0; i < n && src[i] != '\0'; i++)
+	while (d > 9)
+	{
+		d /= 10;
+		count *= 10;
+	}
 
-								{
-
-											dest[destLength + i] = src[i];
-
-												}
-
-							dest[destLength + i] = '\0';
-
-
-
-								return (dest);
-
+	for (; count >= 1; count /= 10)
+	{
+		_putchar(((m / count) % 10) + 48);
+	}
 }
