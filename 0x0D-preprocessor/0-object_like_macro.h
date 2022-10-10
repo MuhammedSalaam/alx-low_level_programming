@@ -1,1 +1,3 @@
-m sm m   m mssss
+#ifndef SIZE
+#define SIZE 1024
+#endif
